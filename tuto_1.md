@@ -30,8 +30,9 @@ user input a mark
 if mark <40, print "fail"
 
 else, print "pass"
-![tutorial 1 question 1](T1Q1.jpg)
+
 ```
+![tutorial 1 question 1](T1Q1.PNG)
 ### 4. Print the results of the two players’ dice game.
 >>
 ```
