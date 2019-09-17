@@ -12,9 +12,6 @@ answer = first number* second number
 
 print answer
 
-<>
-
-
 ### 2. Determine whether a random number is greater than 50.
 
 generate a random number
