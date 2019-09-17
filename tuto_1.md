@@ -12,6 +12,8 @@ answer = first number* second number
 
 print answer
 
+<img width="1039" alt="rename_screenshot" src="https://user-images.githubusercontent.com/18093541/63129466-956cc580-bf85-11e9-92d8-b028dd483fa5.png">
+
 
 ### 2. Determine whether a random number is greater than 50.
 
