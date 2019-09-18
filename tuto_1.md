@@ -47,6 +47,7 @@ print first player dice number
 
 print second player dice number
 ```
+![T1Q4](T1Q4.PNG)
 ### 5. Print the perimeter of a rectangle.
 >>
 ```
