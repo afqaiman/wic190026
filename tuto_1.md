@@ -1,4 +1,5 @@
 # TUTORIAL 1
+##### MUHAMMAD AFIQ AIMAN BIN MOHD SHUHAIMI (WIC190026)
 
 ## Build the pseudocode and flow chart for each of the problems: (Part I)
 
@@ -13,6 +14,7 @@ answer = first number* second number
 
 print answer
 ```
+![tutorial 1 question 1](T1Q1.PNG)
 ### 2. Determine whether a random number is greater than 50.
 >>
 ```
@@ -32,7 +34,7 @@ if mark <40, print "fail"
 else, print "pass"
 
 ```
-![tutorial 1 question 1](T1Q1.PNG)
+
 ### 4. Print the results of the two players’ dice game.
 >>
 ```
