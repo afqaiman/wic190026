@@ -14,27 +14,28 @@ answer = first number* second number
 
 print answer
 ```
-![tutorial 1 question 1](T1Q1.PNG)
+![T1Q1](T1Q1.PNG)
 ### 2. Determine whether a random number is greater than 50.
 >>
 ```
 generate a random number
 
-if the number >50, print "greater than 50"
+if the number >50, print "YES"
 
-else, print "not geater than 50"
+else, print "NO"
 ```
+![T1Q2](T1Q2.PNG)
 ### 3. Print the pass/fail grade based on the mark entered by user. The passing mark is at least 40.
 >>
 ```
 user input a mark
 
-if mark <40, print "fail"
+if mark <40, print "FAIL"
 
-else, print "pass"
+else, print "PASS"
 
 ```
-
+![T1Q3](T1Q3.PNG)
 ### 4. Print the results of the two players’ dice game.
 >>
 ```
