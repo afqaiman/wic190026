@@ -23,8 +23,8 @@ System.out.printf("number:%d\t%d*%d=%d",i,i,i,square);
 ```
 int v,h,number;
 Random rand = new Random ();
-for(v=0;v<5;v++){
-  for(h=0;h<4;h++){
+for(v=0;v<4;v++){
+  for(h=0;h<5;h++){
     number = rand.nextInt(101);
     System.out.printf("%d\t",number);
   }  
