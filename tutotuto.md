@@ -50,7 +50,7 @@ System.out.printf("the sum of numbers from 1 to %d is %d",number,total);
 #### for (x = 10; x > 0; x++)
 #### sum += x;
 ```
-for (x = 0; x < 10; x++){
+for (x = 10; x > 10; x--){
 sum += x;
 }
 ```
