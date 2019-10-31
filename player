@@ -43,9 +43,7 @@ Scanner sc = new Scanner (System.in);
            
         }while(check!=-1);
         System.out.println("end");
-        for(int=1 ; i <= arr.length-1 ; i++){
-            if 
-        }        
+      
     }
 
 }
