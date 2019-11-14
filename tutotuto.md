@@ -1,115 +1,102 @@
 # WIX1002 Fundamentals of Programming
-###### MUHAMMAD AFIQ AIMAN BIN MOHD SHUHAIMI (WIC190026)
-## Tutorial 4 Flow of Control (Repetition)
+MUHAMMAD AFIQ AIMAN BIN MOHD SHUHAIMI
+## Tutorial 7 File Input and Output
 ### 1. Write statements for each of the following
-#### a. Find the largest integer n so that n^3 is less than 2000.
+#### a. Store ten random integers within 0 to 1000 to a text file name integer.txt.
 ```
-int n,total=0;
-for(n=0;(n*n*n)<2000;n++){
-total=n*n*n;
-System.out.printf("number:%d\t%d*%d*%d=%d\n",n,n,n,n,total);
-}
-System.out.printf("largest n is %d which is %d*%d*%d=%d",n,n,n,n,total);
+        try {
+            PrintWriter p = new PrintWriter(new FileOutputStream("integer.txt"));
+            int j=0;
+            for(int i=0; i<=10; i++){
+                Random rand = new Random();
+                j =  rand.nextInt(1001);
+                p.println(j);
+            }
+            p.close();
+        }catch (IOException e){
+            System.out.println("problem file with output");
+        }
 ```
-#### b. Display the square number of the first twelve integers starting from 1.
+#### b. Read from the text file generated in a. Display all the integer and the largest integer.
 ```
-int i,square=0;
-for(i=1;i<=12;i++){
-square=i*i;
-System.out.printf("number:%d\t%d*%d=%d",i,i,i,square);
-}
+try{
+            Scanner s = new Scanner (new FileInputStream("integer.txt"));
+            int input = s.nextInt();
+            int max = 0;
+            while(s.hasNextInt())
+                System.out.println(s.nextInt());
+                if (input>max){
+                max=r;
+                }
+            }
+            out.println("max number = "+max)
+            s.close();
+        }catch(FileNotFoundException e){
+            System.out.println("file does not found");
+        }
 ```
-#### c. Display a 4-by-5 matrix using random number within 0 to 100.
+#### c. Store ten random integers within 0 to 1000 to a binary file name integer.dat.
 ```
-int v,h,number;
-Random rand = new Random ();
-for(v=0;v<4;v++){
-  for(h=0;h<5;h++){
-    number = rand.nextInt(101);
-    System.out.printf("%d\t",number);
-  }  
-System.out.println("\n");
-}
+        try {
+            ObjectOutputStream out = new ObjectOutputStream (new FileOutputStream("integer.dat"));
+            int max = 0;
+            for(int i=1;i<=10;i++){
+                Random rand = new Random();
+                int r = rand.nextInt(1001);
+                out.writeInt(r);
+            }
+            out.close();
+        }catch (IOException e){
+            System.out.println("problem file with output");
+        }
 ```
-#### d. Compute the sum of numbers from 1 to a given number.
-```
-int n,number,total=0;
-System.out.println("Enter a number:");
-Scanner scan = new Scanner(System.in);
-number = scan.nextInt();                
-for(n=1;n<=number;n++){
-  total=total+n;
-}
-System.out.printf("the sum of numbers from 1 to %d is %d",number,total);
-```
-#### e. Compute the sum of the series: 1/25+2/24+3/23 … + 25/1 in two decimal places.
+#### d. Read from the binary file generated in a c. Display the all the integer and the average.
 ```
 ```
 ### 2. Correct the error for the following statements.
-#### a.
-#### for (x = 10; x > 0; x++)
-#### sum += x;
+#### a. PrintWriter out = new PrintWriter(new FileOutputStream
+#### ("d:\data\matrix.txt"));
 ```
-for (x = 10; x > 10; x--){
-sum += x;
-}
+a. PrintWriter out = new PrintWriter(new FileOutputStream
+("d:/data/matrix.txt"));
 ```
 #### b.
-#### do
-#### x += 2;
-#### y += x;
-#### System.out.println(x + " and " + y);
-#### while (x < 100)
-```
-
-```
-#### c.
-#### for ( x==1, y==20; x < y, x++, y-=2);
-#### System.out.println(x & " " & y);
-```
-for ( x=1, y=20; x < y; x++, y-=2){
-System.out.printf("x=%d & y=%d\n",x,y);
-}
-```
-#### d.
-#### i =1;
-#### while(i<10) {
-#### if (i==10)
-#### System.out.println("Program End");
+#### try {
+####  PrintWriter out = new PrintWriter(new FileOutputStream("data.txt"));
+#### out.close();
+#### } catch (FileNotFoundException e) {
+####  System.out.println("Problem with file output");
 #### }
 ```
-int i=1;
-while(i<10) {  
- i++;
- if (i==10){
- System.out.println("Program End");
- }
-```
-### 3. Write the statements that display the first ten values of the Fibonacci sequence. Given the formula f1 = 1, f2 =1, fn = fn-1 + fn-2.
-```
-int b=1,s=1,total=0,counter,number=0;
-for(counter=3;counter<13;counter++){
-    total=s+b;
-    number++;
-    System.out.printf("no%d\tf%d\t%d+%d=%d\n",number,counter,s,b,total);
-    b=s;
-    s=total;              
+try {
+PrintWriter out = new PrintWriter(new FileOutputStream("data.txt"));
+out.close();
+} catch (IOException e) {
+System.out.println("Problem with file output");
 }
 ```
-### 4. Write the statements that display the string in reverse order. (use String.length() to get the length of the string)
+#### c.
+#### int num;
+#### Scanner a = new Scanner(new FileInputStream("data.dat"));
+#### num = a.readInt();
+#### a.close();
 ```
-         System.out.println("Enter string to reverse:");
-        
-        Scanner scan = new Scanner(System.in);
-        String word = scan.nextLine();
-        String reverse = "";
-        
-        
-        for(int i = word.length() - 1; i >= 0; i--)
-        {
-            reverse = reverse + word.charAt(i);
-        }
-        
-        System.out.println("Reversed string is:");
-        System.out.println(reverse);
+int num;
+Scanner a = new Scanner(new FileInputStream("data.dat"));
+num = a.nextInt();
+a.close();
+```
+#### d.
+#### ObjectOutputStream o = new ObjectOutputStream (new
+#### FileOutputStream("data.dat"));
+#### o.print('A');
+#### o.close();
+```
+ObjectOutputStream o = new ObjectOutputStream (new
+FileOutputStream("data.dat"));
+o.write('A');
+o.close();
+```
+### 3. Write a program that convert a sentence into binary number (ASCII code 8 bit) and store it in a text file named data.txt. Then, read from the text file and display the sentence.
+```
 ```
