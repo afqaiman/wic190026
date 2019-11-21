@@ -1,0 +1,60 @@
+
+package wic190026;
+
+import java.util.Scanner;
+
+public class Wic190026 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        System.out.print("enter first 10 bits number : ");
+        String a = sc.next();
+        System.out.print("enter second 10 bits number : ");
+        String b = sc.next();
+        char []arr1 = a.toCharArray();
+        char []arr2 = b.toCharArray();
+        xor(arr1,arr2);
+    }
+    public static void xor (char [] arr1 , char [] arr2){
+        
+        int [] arrx = new int [10];
+        int [] arry = new int [10];
+        double [] fin = new double [10];
+        int [] xor = new int [10];
+        double sum=0;
+        //arrx
+        for (int i = 0; i < 10; i++) {
+            if(arr1[i] == '0'){
+                arrx[i] = 0;
+            }
+            if(arr1[i] == '1'){
+                arrx[i] = 1;
+            }  
+        }
+        //arry
+        for (int i = 0; i < 10; i++) {
+            if(arr2[i] == '0'){
+                arry[i] = 0;
+            }
+            if(arr2[i] == '1'){
+                arry[i] = 1;
+            }  
+        }
+        //xor
+        for (int i = 0; i < 10; i++) {
+            if (arrx[i] == arry[i]){
+                xor[i]=0;
+            }
+            else if (arrx[i] != arry[i]){
+                xor[i]=1;
+            }
+        }
+        for (int i = 0; i < 10; i++) {
+            fin[i] = xor[i] * (Math.pow(2,(9-i)));
+        }
+        for (int i = 0; i < 10; i++) {
+            sum=sum+fin[i];
+        }
+        System.out.println("XOR result : "+sum);
+    }
+}
